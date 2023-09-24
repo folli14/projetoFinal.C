@@ -21,7 +21,7 @@ int resposta[15];
 // Variáveis Globais
 char nome_aluno[75]; // nome do usuário
 
-void main(void) {
+void maim(void) {
 
   valor_inicial = time(NULL);
 
