@@ -21,7 +21,8 @@ int resposta[15];
 // Variáveis Globais
 char nome_aluno[75]; // nome do usuário
 
-void maim(void) {
+void maim(void)
+{
 
   valor_inicial = time(NULL);
 
@@ -29,10 +30,11 @@ void maim(void) {
 }
 
 // Primeira tela
-int tela_inicial(void) {
+int tela_inicial(void)
+{
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("Olá, usuário, tudo bem?");
   printf(NEGRITO "\nEsse programa tem o intuito de te ensinar sobre a Segunda "
@@ -45,7 +47,8 @@ int tela_inicial(void) {
 }
 
 // Segunda tela
-int menu_inicial(void) {
+int menu_inicial(void)
+{
   int resp;
   printf(VERMELHO "\n\nSó uma observação, a partir de agora você vai usar os "
                   "números do seu teclado para responder" RESERT);
@@ -54,12 +57,14 @@ int menu_inicial(void) {
   printf("\nDIGITE 2 PARA NÃO");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == 1) {
+  if (resp == 1)
+  {
     system("clear");
     system("cls");
     menu();
   }
-  if (resp != 1) {
+  if (resp != 1)
+  {
     printf("Ok, você não entendeu...");
     printf("\nÉ simples, %s,", nome_aluno);
     printf("\nVocê vai clicar no número desejado e dar enter");
@@ -69,21 +74,18 @@ int menu_inicial(void) {
     printf("\nAgora, digite qualquer número para prosseguir");
     printf("\nRESPOSTA: ");
     scanf("%i", &resp);
-    if (resp != 18871968) {
-      menu();
-    } else {
-      menu();
-    }
+    menu();
   }
   return 0;
 }
 
 // Terceira tela
-int menu(void) {
+int menu(void)
+{
   int resp;
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("\n|------MENU INICIAL-------|\n");
   printf("\nOque deseja fazer?\n");
@@ -91,7 +93,8 @@ int menu(void) {
   printf("\n2) QUIZ SOBRE A SEGUNDA GUERRA MUNDIAL\n");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  switch (resp) {
+  switch (resp)
+  {
   case 1:
     menu_explicacao();
     break;
@@ -111,7 +114,8 @@ int menu(void) {
 }
 
 // Decobrir próximo passo a ser executado
-int descobrir(void) {
+int descobrir(void)
+{
   int resp;
   printf("\n");
   printf("Oque deseja fazer agora?");
@@ -121,7 +125,8 @@ int descobrir(void) {
   printf("\n4) Encerrar o programa");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  switch (resp) {
+  switch (resp)
+  {
 
   case 1:
     menu();
@@ -151,11 +156,12 @@ int descobrir(void) {
   return 0;
 }
 
-int menu_explicacao(void) {
+int menu_explicacao(void)
+{
   int resp;
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("|---MENU DE EXPLICAÇÃO---|\n");
   printf("\n1) EXPLICAÇÃO GERAL SOBRE A SEGUNDA GUERRA MUNDIAL\n");
@@ -164,7 +170,8 @@ int menu_explicacao(void) {
   printf("\n4) VOLTAR PARA O MENU INICIAL\n");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  switch (resp) {
+  switch (resp)
+  {
   case 1:
 
     explicacao_geral_2G();
@@ -196,10 +203,11 @@ int menu_explicacao(void) {
   return 0;
 }
 
-int explicacao_geral_2G(void) {
+int explicacao_geral_2G(void)
+{
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("\n• A Segunda Guerra Mundial aconteceu entre 1939 e 1945. O "
          "principal objetivo do conflito era o de combater os governos "
@@ -228,15 +236,16 @@ int explicacao_geral_2G(void) {
          "Eixo, formado por Alemanha, Itália e Japão, e do outro, estava o "
          "grupo dos Aliados, composto por Inglaterra, União Soviética (URSS), "
          "Estados Unidos e França. Outros países participaram da guerra, "
-         "inclusive o Brasil, mas dentro de um desses blocos.\n");
+         "inclusive o Brasil, mas dentro de um desses blocos.\n");  
   descobrir();
   return 0;
 }
 
-int explicacao_das_consequencias(void) {
+int explicacao_das_consequencias(void)
+{
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("\nAs Consequências da Segunda Guerra Mundial se prolongaram por "
          "longas décadas.\nOs seis anos de confronto resultaram em muitas "
@@ -250,10 +259,11 @@ int explicacao_das_consequencias(void) {
   return 0;
 }
 
-int explicacao_paises_envolvidos(void) {
+int explicacao_paises_envolvidos(void)
+{
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("Quase todos os países do mundo participaram da Segunda Guerra "
          "Mundial, com a exceção de alguns países que permaneceram neutros. A "
@@ -266,11 +276,12 @@ int explicacao_paises_envolvidos(void) {
   return 0;
 }
 
-int menu_do_quiz(void) {
+int menu_do_quiz(void)
+{
   int resp;
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("|------MENU DO QUIZ------|");
   printf("\n");
@@ -281,7 +292,8 @@ int menu_do_quiz(void) {
   printf("3) NÍVEL DIFÍCIL");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  switch (resp) {
+  switch (resp)
+  {
   case 1:
     nivel_facil();
     break;
@@ -304,11 +316,12 @@ int menu_do_quiz(void) {
   return 0;
 }
 
-int nivel_facil(void) {
+int nivel_facil(void)
+{
   int resp, pontuacao = 0;
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("Ok, nível fácil");
   printf("\nComo já dito acima, digite o número da resposta");
@@ -322,13 +335,15 @@ int nivel_facil(void) {
   printf("\n4) 1981");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[0]);
-  if (resposta[0] == gabarito[0]) {
+  if (resposta[0] == gabarito[0])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = 1;
   }
 
-  if (resposta[0] != gabarito[0]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nA Segunda Guerra Mundial teve início em 1 de setembro de 1939\n");
     printf("Vamos para a próxima questão\n");
@@ -342,13 +357,15 @@ int nivel_facil(void) {
   printf("\n4) 1945");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[1]);
-  if (resposta[1] == gabarito[1]) {
+  if (resposta[1] == gabarito[1])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
 
-  if (resposta[1] != gabarito[1]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nSegunda Guerra Mundial terminou em 2 de setembro de 1945, "
            "exatamente 6 anos e 1 dia depois de seu início\n");
@@ -363,13 +380,15 @@ int nivel_facil(void) {
   printf("\n4) Bulgária");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[2]);
-  if (resposta[2] == gabarito[2]) {
+  if (resposta[2] == gabarito[2])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
 
-  if (resposta[2] != gabarito[2]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nFoi o Japão, o Japão oficialmente se rendeu em 14 de agosto de "
            "1945 após os Estados Unidos lançarem bombas atômicas sobre as "
@@ -383,13 +402,15 @@ int nivel_facil(void) {
   printf("\n2) Não");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[3]);
-  if (resposta[3] == gabarito[3]) {
+  if (resposta[3] == gabarito[3])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
 
-  if (resposta[3] != gabarito[3]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nSim, O Brasil entrou na Segunda Guerra Mundial em 30 de junho de "
            "1944, ao lado dos países aliados, isto é, Estados Unidos, "
@@ -406,12 +427,14 @@ int nivel_facil(void) {
   printf("\n4) América do Sul");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[4]);
-  if (resposta[4] == gabarito[4]) {
+  if (resposta[4] == gabarito[4])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     pontuacao = pontuacao + 1;
   }
 
-  if (resposta[4] != gabarito[4]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nA guerra iniciou-se na Europa, mas espalhou-se pela África, Ásia "
            "e Oceania e contou com o envolvimento de nações de todos os "
@@ -423,25 +446,29 @@ int nivel_facil(void) {
   printf("\n2 para não");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == 1) {
-    for (int i = 0; i <= 4; i++) {
+  if (resp == 1)
+  {
+    for (int i = 0; i <= 4; i++)
+    {
       printf("\nQuestão %i", i + 1);
       printf("\nGabarito %i | Sua resposta %i", gabarito[i], resposta[i]);
     }
   }
 
-  if (resp != 1) {
+  if (resp != 1)
+  {
     printf("\nOk\n");
   }
   calcular_pontuacao(pontuacao);
   return 0;
 }
 
-int nivel_medio(void) {
+int nivel_medio(void)
+{
   int resp, pontuacao = 0;
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("\nOk, nível médio");
   printf("\nComo já dito acima, digite o número da resposta");
@@ -457,13 +484,15 @@ int nivel_medio(void) {
   printf("\n4) Noa Handel");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == gabarito[5]) {
+  if (resp == gabarito[5])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("\nVamos para a próxima questão\n");
     pontuacao = 1;
   }
 
-  if (resp == 1) {
+  if (resp == 1)
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nLê direitinho na próxima, Adolfo Hitler? O nome certo é Adolf "
            "Hitler, ele nasceu em Braunau am Inn, na Áustria, no dia 20 de "
@@ -473,7 +502,8 @@ int nivel_medio(void) {
            "últimas semanas da Segunda Guerra Mundial\n");
   }
 
-  if ((resp != gabarito[5]) && (resp != 1)) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nO nome certo é Adolf Hitler, Hitler nasceu em Braunau am Inn, na "
            "Áustria, no dia 20 de abril de 1889. Hitler foi o quarto filho de "
@@ -492,12 +522,14 @@ int nivel_medio(void) {
   printf("\n4) Benito Mussolini");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == gabarito[6]) {
+  if (resp == gabarito[6])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
-  if (resp != gabarito[6]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nPuts, na verdade o nome dele era Josef Stalin\n");
     printf("Vamos para a próxima questão\n");
@@ -511,12 +543,14 @@ int nivel_medio(void) {
   printf("\n4) Benito Mussolini");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == gabarito[7]) {
+  if (resp == gabarito[7])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
-  if (resp != gabarito[7]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nPuts, errou mas tudo bem, na verdade o nome dele era Benito "
            "Mussolini\n");
@@ -532,12 +566,14 @@ int nivel_medio(void) {
   printf("\n4) Alemanha Quardista");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == gabarito[8]) {
+  if (resp == gabarito[8])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
-  if (resp != gabarito[8]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("O nome certo era Alemanha Nazista, esse foi o nome dado por Hitler "
            "em 16 de março em 1930 e durou até 20 de setembro de 1945\n");
@@ -552,11 +588,13 @@ int nivel_medio(void) {
   printf("\n4) Eixo e Tríplice Albânia");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == gabarito[9]) {
+  if (resp == gabarito[9])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     pontuacao = pontuacao + 1;
   }
-  if (resp != gabarito[9]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nNa Segunda Guerra Mundial, estiveram envolvidos dois grupos de "
            "países: os do Eixo (Alemanha, Itália e Japão) e os Aliados (Reino "
@@ -568,23 +606,27 @@ int nivel_medio(void) {
   printf("\n2 para não");
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
-  if (resp == 1) {
-    for (int i = 5; i <= 9; i++) {
+  if (resp == 1)
+  {
+    for (int i = 5; i <= 9; i++)
+    {
       printf("\nGabarito %i | %i Sua resposta", gabarito[i], resposta[i]);
     }
   }
-  if (resp != 1) {
+  if (resp != 1)
+  {
     printf("\nOK\n");
   }
   calcular_pontuacao(pontuacao);
   return 0;
 }
 
-int nivel_dificil(void) {
+int nivel_dificil(void)
+{
   int resp, pontuacao = 0;
   // LIMPAR A TELA
-  system("clear");
-  system("cls");
+  system("clear"); //! LINUX
+  system("cls");   //! WINDOWS
   // LIMPOU
   printf("\nOk, nível difícil");
   printf("\nComo já dito acima, digite o número da resposta");
@@ -600,12 +642,14 @@ int nivel_dificil(void) {
   printf("\n4) Bulgária");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[10]);
-  if (resposta[10] == gabarito[10]) {
+  if (resposta[10] == gabarito[10])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = 1;
   }
-  if (resposta[10] != gabarito[10]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nO Ataque a Pearl Harbor foi um ataque militar surpresa do "
            "Serviço Aéreo Imperial da Marinha Japonesa contra os Estados "
@@ -623,12 +667,14 @@ int nivel_dificil(void) {
       "\n4) Foi morto por um traidor, Hitler foi morto por um traidor Nazista");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[11]);
-  if (resposta[11] == gabarito[11]) {
+  if (resposta[11] == gabarito[11])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
-  if (resposta[11] != gabarito[11]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nAdolf Hitler morreu no dia 30 de abril de 1945, depois que ele "
            "atirou contra a própria cabeça\n");
@@ -647,12 +693,14 @@ int nivel_dificil(void) {
          "e Japão");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[12]);
-  if (resposta[12] == gabarito[12]) {
+  if (resposta[12] == gabarito[12])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
-  if (resposta[12] != gabarito[12]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nA Segunda Guerra teve como estopim a invasão da Polônia pela "
            "Wehrmacht (exército alemão) em 1º de setembro de 1939\n");
@@ -669,12 +717,14 @@ int nivel_dificil(void) {
   printf("\n4) Cerco de Bastogne");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[13]);
-  if (resposta[13] == gabarito[13]) {
+  if (resposta[13] == gabarito[13])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     printf("Vamos para a próxima questão\n");
     pontuacao = pontuacao + 1;
   }
-  if (resposta[13] != gabarito[13]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("!\nNa verdade estamos falando do Dia D. \nO Dia D, também "
            "conhecido como Operação Overlord, aconteceu no dia 6 de junho de "
@@ -696,11 +746,13 @@ int nivel_dificil(void) {
   printf("\n4) Minsk");
   printf("\nRESPOSTA: ");
   scanf("%i", &resposta[14]);
-  if (resposta[14] == gabarito[14]) {
+  if (resposta[14] == gabarito[14])
+  {
     printf(VERDE "\nACERTOU!!!\n" RESERT);
     pontuacao = pontuacao + 1;
   }
-  if (resposta[14] != gabarito[14]) {
+  else
+  {
     printf(VERMELHO "\nERROU!\n" RESERT);
     printf("\nPuts... o certo seria Leningrado\n");
   }
@@ -711,44 +763,53 @@ int nivel_dificil(void) {
   printf("\nRESPOSTA: ");
   scanf("%i", &resp);
 
-  if (resp == 1) {
-    for (int i = 10; i <= 14; i++) {
+  if (resp == 1)
+  {
+    for (int i = 10; i <= 14; i++)
+    {
       printf("\nGabarito %i | Sua resposta %i\n", gabarito[i], resposta[i]);
     }
   }
-  if (resp != 1) {
+  if (resp != 1)
+  {
     printf("\nOk\n");
   }
   calcular_pontuacao(pontuacao);
   return 0;
 }
 
-int calcular_pontuacao(int pontuacao) {
-  if (pontuacao == 5) {
+int calcular_pontuacao(int pontuacao)
+{
+  if (pontuacao == 5)
+  {
     printf("\n\nNOSSA %s", nome_aluno);
     printf("\nVocê acertou tudo");
     printf("\nacertou %i/5", pontuacao);
-  } else if ((pontuacao < 5) && (pontuacao > 0)) {
+  }
+  else if ((pontuacao < 5) && (pontuacao > 0))
+  {
     printf("\n\nVocê não acertou tudo");
     printf("\nMas foi bem");
     printf("\nacertou %i/5", pontuacao);
     printf("\n");
-  } else if (pontuacao == 0) {
+  }
+  else if (pontuacao == 0)
+  {
     printf("\n\nVocê errou tudo...");
     printf("\nacertou %i/5", pontuacao);
     printf("\nMas não tem problema.");
   }
-  // linha -> 112
   descobrir();
   return 0;
 }
 
-int fim(void) {
+int fim(void)
+{
 
   valor_final = time(NULL);
   tempo_gasto = valor_final - valor_inicial;
   mortes = tempo_gasto * 0.44;
-  /*			            ||
+  /*		||
       Pessoas que morriam por segundo na segunda guerra
   */
   printf("\nVocê utilizou o programa por %i segundos", tempo_gasto);
