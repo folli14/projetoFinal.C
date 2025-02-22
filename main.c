@@ -3,25 +3,24 @@
 #include <string.h>
 #include <time.h>
 
-// Bloco sobre o tempo
+
 time_t valor_final, valor_inicial;
 int tempo_gasto, mortes;
 
-// Cores utilizadas
+
 #define VERDE "\x1b[32m"
 #define RESET "\x1b[0m"
 #define VERMELHO "\x1b[31m"
 #define NEGRITO "\x1b[1m"
 
-// Bloco sobre o GABARITO
 const int gabarito[15] = {2, 4, 1, 1, 2, 3, 2, 4,
-                          3, 2, 1, 3, 3, 1, 2}; // gabarito do quiz
+                          3, 2, 1, 3, 3, 1, 2}; 
 int resposta[15];
 
-// Variáveis Globais
-char nome_aluno[75]; // nome do usuário
 
-void maim(void)
+char nome_aluno[75];
+
+void main(void)
 {
 
   valor_inicial = time(NULL);
@@ -29,13 +28,12 @@ void maim(void)
   tela_inicial();
 }
 
-// Primeira tela
+
 int tela_inicial(void)
 {
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+  
+  system("clear");
+  system("cls");
   printf("Olá, usuário, tudo bem?");
   printf(NEGRITO "\nEsse programa tem o intuito de te ensinar sobre a Segunda "
                  "Guerra Mundial");
@@ -46,7 +44,6 @@ int tela_inicial(void)
   return 0;
 }
 
-// Segunda tela
 int menu_inicial(void)
 {
   int resp;
@@ -79,14 +76,14 @@ int menu_inicial(void)
   return 0;
 }
 
-// Terceira tela
+
 int menu(void)
 {
   int resp;
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+  
+  system("clear");
+  system("cls");   
+  
   printf("\n|------MENU INICIAL-------|\n");
   printf("\nOque deseja fazer?\n");
   printf("\n1) EXPLICAÇÃO SOBRE A SEGUNDA GUERRA MUNDIAL\n");
@@ -113,7 +110,6 @@ int menu(void)
   return 0;
 }
 
-// Decobrir próximo passo a ser executado
 int descobrir(void)
 {
   int resp;
@@ -159,10 +155,9 @@ int descobrir(void)
 int menu_explicacao(void)
 {
   int resp;
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+ 
+  system("clear");
+  system("cls");   
   printf("|---MENU DE EXPLICAÇÃO---|\n");
   printf("\n1) EXPLICAÇÃO GERAL SOBRE A SEGUNDA GUERRA MUNDIAL\n");
   printf("\n2) EXPLICAÇÃO SOBRE OS PAÍSES ENVOLVIDOS NA GUERRA\n");
@@ -205,10 +200,10 @@ int menu_explicacao(void)
 
 int explicacao_geral_2G(void)
 {
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+ 
+  system("clear");
+  system("cls");   
+
   printf("\n• A Segunda Guerra Mundial aconteceu entre 1939 e 1945. O "
          "principal objetivo do conflito era o de combater os governos "
          "militaristas e autoritários que surgiram em alguns países da Europa "
@@ -243,10 +238,9 @@ int explicacao_geral_2G(void)
 
 int explicacao_das_consequencias(void)
 {
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+ 
+  system("clear");
+  system("cls");  
   printf("\nAs Consequências da Segunda Guerra Mundial se prolongaram por "
          "longas décadas.\nOs seis anos de confronto resultaram em muitas "
          "mortes, devastação e uma série de desdobramentos no campo "
@@ -261,10 +255,10 @@ int explicacao_das_consequencias(void)
 
 int explicacao_paises_envolvidos(void)
 {
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+  
+  system("clear"); 
+  system("cls");   
+ 
   printf("Quase todos os países do mundo participaram da Segunda Guerra "
          "Mundial, com a exceção de alguns países que permaneceram neutros. A "
          "Segunda Guerra Mundial colocou duas alianças umas contra as outras, "
@@ -279,10 +273,10 @@ int explicacao_paises_envolvidos(void)
 int menu_do_quiz(void)
 {
   int resp;
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+
+  system("clear"); 
+  system("cls");  
+ 
   printf("|------MENU DO QUIZ------|");
   printf("\n");
   printf("1) NÍVEL FÁCIL");
@@ -319,10 +313,10 @@ int menu_do_quiz(void)
 int nivel_facil(void)
 {
   int resp, pontuacao = 0;
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+
+  system("clear"); 
+  system("cls");  
+ 
   printf("Ok, nível fácil");
   printf("\nComo já dito acima, digite o número da resposta");
   printf(NEGRITO "\nSÓ UMA COISINHA\nLeia bem as questoẽs\nAlgumas tem uma ou "
@@ -466,10 +460,10 @@ int nivel_facil(void)
 int nivel_medio(void)
 {
   int resp, pontuacao = 0;
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+
+  system("clear"); 
+  system("cls");  
+ 
   printf("\nOk, nível médio");
   printf("\nComo já dito acima, digite o número da resposta");
   printf(NEGRITO "\nSÓ UMA COISINHA\nLeia bem as questoẽs\nAlgumas tem uma ou "
@@ -624,10 +618,10 @@ int nivel_medio(void)
 int nivel_dificil(void)
 {
   int resp, pontuacao = 0;
-  // LIMPAR A TELA
-  system("clear"); //! LINUX
-  system("cls");   //! WINDOWS
-  // LIMPOU
+
+  system("clear"); 
+  system("cls");  
+ 
   printf("\nOk, nível difícil");
   printf("\nComo já dito acima, digite o número da resposta");
   printf(NEGRITO "\nSÓ UMA COISINHA\nLeia bem as questoẽs\nAlgumas tem uma ou "
